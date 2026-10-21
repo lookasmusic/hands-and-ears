@@ -1,0 +1,53 @@
+name: Beta feedback / bug
+description: Something in a workflow didn't work, was confusing, or could be better.
+title: "[feedback] "
+labels: ["beta-feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing. Please don't paste file paths, project names, audio, or anything private.
+  - type: dropdown
+    id: workflow
+    attributes:
+      label: Workflow
+      options: [Mix & EQ, Session Cleanup, Setup / install, Plugin check, Other]
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of report
+      options: [Something broke, Wrong or confusing result, Undo / recovery problem, Idea or request]
+    validations:
+      required: true
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened
+      description: What you asked your AI to do, what it did, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce (if something broke)
+  - type: input
+    id: ai_client
+    attributes:
+      label: AI client
+      placeholder: Claude Code 2.x
+  - type: input
+    id: host
+    attributes:
+      label: DAW and version
+      placeholder: Ableton Live 12.2
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: macOS 26.1 (Apple silicon)
+  - type: input
+    id: versions
+    attributes:
+      label: Hands / Ears versions

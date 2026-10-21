@@ -17,10 +17,16 @@ GitHub account.
 
 You can also [file a report by hand](../../issues/new?template=plugin-compat.yml).
 
+## Beta feedback
+Something in a workflow broke, confused you, or could be better? [Send feedback](../../issues/new?template=feedback.yml).
+
+## What's tested
+See [COMPATIBILITY.md](COMPATIBILITY.md) for the tested DAWs, AI clients and plugins.
+
 ## What happens next
 Many plugin problems can be fixed without a new release: Hands keeps a list of per-plugin adjustments (timing, names
 of controls, known limits) that we update from these reports. Real bugs go into the next Hands update.
 
 ## Beta
-The beta supports Ableton Live 12 on macOS. Compatibility depends on the plugin, its version and your setup. Hands
+The beta supports Ableton Live 12 on macOS, with two workflows: **Mix & EQ** (your AI measures, suggests, asks, applies, verifies, and you can undo) and **Session Cleanup** (find unused material, preview, apply on a copy, undo). Setup steps come with the installer. Compatibility depends on the plugin, its version and your setup. Hands
 checks your own plugins on your computer and tells you which work fully, which work with limits, and which don't.
