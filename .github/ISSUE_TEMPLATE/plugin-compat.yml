@@ -1,0 +1,65 @@
+name: Plugin compatibility report
+description: A plugin Hands can't load, or can only use partly.
+title: "[plugin] "
+labels: ["plugin-compat"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. If Hands filled this in for you, check it and click Submit. Please don't add file
+        paths, project names or anything personal.
+  - type: input
+    id: plugin
+    attributes:
+      label: Plugin
+      placeholder: Pro-Q 4
+    validations:
+      required: true
+  - type: input
+    id: maker
+    attributes:
+      label: Maker
+      placeholder: FabFilter
+  - type: input
+    id: version
+    attributes:
+      label: Plugin version
+      placeholder: 4.02
+  - type: dropdown
+    id: format
+    attributes:
+      label: Format
+      options: [VST3, AU, Other]
+    validations:
+      required: true
+  - type: dropdown
+    id: result
+    attributes:
+      label: Result
+      options: [Works with limits, Doesn't work]
+    validations:
+      required: true
+  - type: input
+    id: stage
+    attributes:
+      label: Where it failed or what's limited
+      description: The step or limit codes Hands reported (e.g. "crashed while loading", "generic parameter names", "state applied late").
+  - type: input
+    id: host
+    attributes:
+      label: DAW and version
+      placeholder: Ableton Live 12.2
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: macOS 26.1 (Apple silicon)
+  - type: input
+    id: hands_version
+    attributes:
+      label: Hands version
+  - type: textarea
+    id: details
+    attributes:
+      label: Anything else
+      description: What you were trying to do, if it helps. Optional.
